@@ -1,0 +1,7 @@
+bin
+gen
+AndroidManifestFree.xml
+AndroidManifestPro.xml
+src/com/feigdev/redditmailpro
+proguard.cfg
+proguard-project.txt

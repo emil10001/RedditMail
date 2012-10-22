@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">RedditMail</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+	<string name="login">login</string>
+	<string name="cancel">cancel</string>
+	<string name="clear">clear</string>
+	<string name="send">send</string>
+	<string name="recipient">recipient</string>
+	<string name="subject">subject</string>
+	<string name="alternate_title">An alternate title that is long</string>
+    <string name="toggle_title">Toggle title</string>
+	<string name="enter_text_title">Enter reply:</string>
+	<string name="compose_new_title">Compose new message:</string>
+	<string name="notify_message">New RedditMail message</string>
+	
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_logout">Logout</string>
+   	<string name="menu_compose">Compose</string>
+    
+    <string name="inbox_string">inbox</string>
+    <string name="sent_string">sent</string>
+    <string name="friends_string">friends</string>
+    <string name="friends_comments_string">friends comments</string>
+    
+    <string name="context">context</string>
+    <string name="reply">reply</string>
+    
+     <!-- License checking status messages -->
+    <string name="check_license">Check license</string>
+    <string name="checking_license">Checking license...</string>
+    <string name="dont_allow">Don\'t allow the user access</string>
+    <string name="allow">Allow the user access</string>
+    <string name="application_error">Application error: %1$s</string>
+
+    <!-- Unlicensed dialog messages -->
+    <string name="unlicensed_dialog_title">Application not licensed</string>
+    <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Android Market.</string>
+    <string name="buy_button">Buy app</string>
+    <string name="quit_button">Exit</string>
+</resources>
