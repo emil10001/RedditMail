@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.feigdev"
-    android:versionCode="8"
-    android:versionName="1.8" >
+    package="com.feigdev.redditmailpro"
+    android:versionCode="9"
+    android:versionName="1.9" >
 
     <uses-sdk android:minSdkVersion="7"  android:targetSdkVersion="14"  />
 
@@ -14,10 +14,17 @@
         android:theme="@style/AppTheme">
         
         <activity 
-            android:name="com.feigdev.redditmailfree.RedditMailFreeActivity" >
+            android:name="com.feigdev.redditmailpro.RedditMailProActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.feigdev.redditmailcommon.RedditMailService" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.feigdev.redditmailfree.RedditMailFreeActivity" >
+            <intent-filter >
+                <category android:name="com.feigdev.redditmailpro.RedditMailProActivity" />
                 <category android:name="com.feigdev.redditmailcommon.RedditMailService" />
             </intent-filter>
         </activity>
@@ -25,7 +32,7 @@
             android:enabled="true" >
 			<intent-filter>
 				<action android:name="com.feigdev.redditmailcommon.RedditMailService" />
-				<category android:name="com.feigdev.redditmailfree.RedditMailFreeActivity" />
+				<category android:name="com.feigdev.redditmailpro.RedditMailProActivity" />
 			</intent-filter>
 	    </service>
           

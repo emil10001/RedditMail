@@ -9,13 +9,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.feigdev.R;
 import com.feigdev.redditmailfree.RedditMailFreeActivity;
+import com.feigdev.redditmailpro.R;
 import com.feigdev.webcom.PersistentCookieStore;
 import com.feigdev.webcom.SimpleResponse;
 import com.feigdev.webcom.WebComListener;
@@ -176,9 +177,14 @@ public class RedditMailService extends Service implements WebComListener {
 	}
 	
 	private void notifyNewMessage(){
-		if (Constants.PV) {
+		if (Constants.PV && !RedditMailFreeActivity.isRunning) {
 	    	CharSequence text = "You have new Reddit Mail";
 	        Notification notification = new Notification(R.drawable.orange_envelope, text, System.currentTimeMillis());
+	        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+	        notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+	        notification.ledOnMS = 2 * 1000;
+	        notification.ledOffMS = 2 * 1000;
+	        notification.ledARGB = Color.RED;
 	        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, RedditMailFreeActivity.class), 0);
 	        notification.setLatestEventInfo(this, "New RedditMail", text, contentIntent);
 	        mNm.notify(R.string.notify_message, notification);
@@ -187,6 +193,7 @@ public class RedditMailService extends Service implements WebComListener {
 	
 	public void cancelNotify(){
 		mNm.cancel(R.string.notify_message);
+		mNm.cancelAll();
 	}
 	
 	
