@@ -12,3 +12,5 @@ This is an app that handles your Reddit Mail. It gives you access to your inbox,
 <img src="http://files.feigdev.com/redditmail_1_login.png" alt="login screenshot" width="220px"> _ 
 <img src="http://files.feigdev.com/redditmail_2_inbox.png" alt="inbox screenshot" width="220px"> _ 
 <img src="http://files.feigdev.com/redditmail_3_compose.png" alt="compose message screenshot" width="220px">
+
+By <a href="plus.google.com/u/0/110693175237378228684?rel=author">E John Feig</a>
